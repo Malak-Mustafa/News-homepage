@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+:root {
+  --SoftOrange: hsl(35, 77%, 62%);
+  --SoftRed: hsl(5, 85%, 63%);
+  --Off-white: hsl(36, 100%, 99%);
+  --GrayishBlue: hsl(233, 8%, 79%);
+  --DarkGrayishBlue: hsl(236, 13%, 42%);
+  --VeryDarkBlue: hsl(240, 100%, 5%);
+  --font-family: "Inter", sans-serif;
+}
+body {
+  margin: 3rem 7rem;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--Off-white);
+  font-family: var(--font-family);
+  font-size: 15px;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.pagesCon {
+  display: flex;
+  gap: 2rem;
+}
+.pages {
+  text-decoration: none;
+  color: var(--DarkGrayishBlue);
+}
+span > img {
+  width: 50px;
+}
+.middle {
+  display: grid;
+  grid-template-columns: 30% 30% auto;
+  grid-template-areas:
+    "img img theside"
+    "theH1 thepAndB theside";
+  gap: 1.5rem;
+  min-height: 50vh;
+  margin-bottom: 5rem;
+}
+.mainImg {
+  grid-area: img;
+  width: 41rem;
+}
+.mainH {
+  grid-area: theH1;
+  font-size:3rem
+}
+.buttonSec {
+  grid-area: thepAndB;
+}
+.buttonSec >p{
+    padding-bottom:1rem ;
+    color: var(--DarkGrayishBlue);
+    line-height: 1.5em;
+}
+.buttonSec >button{
+    width: 10rem;
+    height: 3rem;
+    text-transform: capitalize;
+    color: var(--Off-white);
+    background-color: var(--SoftRed);
+    border: none;
+    font-size: 1rem;
+}
+.side {
+  grid-area: theside;
+  background-color: var(--VeryDarkBlue);
+  color: var(--Off-white);
+}
